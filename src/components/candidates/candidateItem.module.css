@@ -47,3 +47,8 @@
   .actions button:active {
     background-color: #ffe2ed;
   }
+
+  .custombtn {
+    background-color: #77002e;
+    color: white;
+  }

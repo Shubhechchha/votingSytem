@@ -1,23 +1,25 @@
 import CandidateItem from './candidateItem';
-import {Grid} from '@material-ui/core';
+import {Row, Col}  from "react-bootstrap";
 
 function CandidateList(props) {
     return (
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        {props.candidates.map ( (candidate) => ( 
-          <Grid item md={3}>
-            <CandidateItem 
-                key={candidate.id} 
-                id={candidate.id} 
-                image={candidate.image} 
-                name ={candidate.name}
-                description = {candidate.description}
-                handleVoter={props.handleVoter}
-                
-            />
-          </Grid> 
+      <Row xs={1} md={3} className="g-4">
+        {props.candidates.map ( (candidate) => (
+          <Col>
+            
+              <CandidateItem 
+                      key={candidate.id} 
+                      id={candidate.id} 
+                      image={candidate.image} 
+                      name ={candidate.name}
+                      description = {candidate.description}
+                      handleVoter={props.handleVoter}  
+                  />
+           
+              
+          </Col>  
          ))} 
-      </Grid> 
+      </Row>
     );  
 }
 

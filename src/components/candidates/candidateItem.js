@@ -1,18 +1,17 @@
-import classes from './candidateItem.module.css';
+import {Card, Button}  from "react-bootstrap";
+import classes from "./candidateItem.module.css";
 
 function CandidateItem(props) {
     return (
         <>
-            <div className={classes.image}>
-                <img src={props.image} alt={props.name} />
-            </div>
-            <div className={classes.content}>
-                <h3>{props.name}</h3>
-                <p>{props.description}</p>
-            </div>
-            <div className={classes.actions}>
-                <button onClick={props.handleVoter}>VOTE</button>
-            </div>
+           <Card>
+                <Card.Img variant="top" src={props.image} alt={props.name}/>
+                <Card.Body>
+                    <Card.Title>{props.name}</Card.Title>
+                    <Card.Text>{props.description}</Card.Text>
+                    <Button variant="primary" className={classes.custombtn} onClick={props.handleVoter}>VOTE</Button>
+                </Card.Body>
+            </Card>  
         </>
     ) 
 }
