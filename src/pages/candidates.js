@@ -1,4 +1,6 @@
+import { useState } from "react";
 import CandidateList from "../components/candidates/candidadeList";
+import VoterModal from "../components/Modal";
 
 const DUMMY_DATA = [
 {
@@ -60,10 +62,20 @@ const DUMMY_DATA = [
 ];
 
 function Candidates() {
-    return <section>
-       <h1>List of Candidates</h1>
-      <CandidateList candidates={DUMMY_DATA} />
-    </section>
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const handleVoter =  () => setModalIsOpen(true);
+    const handleClose = () => setModalIsOpen(false);
+    
+    return <>
+        <section>
+            <h1>List of Candidates</h1>
+            <CandidateList candidates={DUMMY_DATA} handleVoter={handleVoter} />
+        </section>
+        <VoterModal show={modalIsOpen} onHide={handleClose}/>
+    </> 
+    
+
 }
 
 export default Candidates;

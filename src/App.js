@@ -7,6 +7,7 @@ import Login from './pages/login';
 import Candidates from './pages/candidates';
 import Layout from './components/layout/Layout';
 
+
 function App() {
   return (
      <> 
@@ -16,6 +17,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      
+     
       </Layout>
     </>
   );
