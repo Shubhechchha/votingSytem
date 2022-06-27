@@ -5,8 +5,7 @@ function CandidateList(props) {
     return (
       <Row xs={1} md={3} className="g-4">
         {props.candidates.map ( (candidate) => (
-          <Col>
-            
+          <Col  key={candidate.id} >
               <CandidateItem 
                       key={candidate.id} 
                       id={candidate.id} 

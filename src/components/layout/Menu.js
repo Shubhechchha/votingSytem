@@ -11,7 +11,6 @@ const Menu = () => {
                         <Nav className="me-auto">
                             <Nav.Link href ="/">Candidates</Nav.Link>
                             <Nav.Link href="/Signup">Signup</Nav.Link>
-                            <Nav.Link href="/login">Login</Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>
