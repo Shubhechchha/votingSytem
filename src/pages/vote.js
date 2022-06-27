@@ -31,7 +31,10 @@ const Vote = (props) => {
   
   const handleVoterSubmission = (e) => {
     e.preventDefault();
-    let prevVoterData = props.prevVoterData.map(voter => ({...voter}));
+    // Making a copy of previous voter data.
+    // The reason is, if we pass form data to setVoterData, it will replace previous Voter Data.
+    // But we want to accumulate voter data instead of replacing/only having latest voter data. 
+    let prevVoterData = props.prevVoterData.map(voter => ({...voter}));  
     prevVoterData.push(formData);
     props.setVoterData(prevVoterData);
   }
