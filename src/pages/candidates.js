@@ -63,8 +63,13 @@ const DUMMY_DATA = [
 
 function Candidates(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [votedCandidateID, setVotedCandidateID] = useState(null);
 
-    const handleVoter =  () => setModalIsOpen(true);
+
+    const handleVoter =  (candidateID) => {
+        setModalIsOpen(true);
+        setVotedCandidateID(candidateID);
+    }
     const handleClose = () => setModalIsOpen(false);
     
     return <>
@@ -80,6 +85,7 @@ function Candidates(props) {
             onHide={handleClose} 
             setVoterData={props.setVoterData} 
             prevVoterData={props.prevVoterData} 
+            votedCandidateID={votedCandidateID}
         />
     </> 
     

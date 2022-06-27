@@ -8,7 +8,12 @@ function VoterModal(props) {
                 <Modal.Title>Modal title</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-               <Vote onHide={props.onHide} setVoterData={props.setVoterData} prevVoterData={props.prevVoterData} />
+               <Vote 
+                onHide={props.onHide} 
+                setVoterData={props.setVoterData} 
+                prevVoterData={props.prevVoterData} 
+                votedCandidateID={props.votedCandidateID}
+               />
             </Modal.Body>
            
     </Modal>

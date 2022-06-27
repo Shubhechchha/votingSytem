@@ -9,7 +9,10 @@ function CandidateItem(props) {
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>{props.description}</Card.Text>
-                    <Button variant="primary" className={classes.custombtn} onClick={props.handleVoter}>VOTE</Button>
+                    <Button 
+                        variant="primary" 
+                        className={classes.custombtn} 
+                        onClick={ () => props.handleVoter(props.id)}>VOTE</Button>
                 </Card.Body>
             </Card>  
         </>

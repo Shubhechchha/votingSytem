@@ -14,8 +14,6 @@ function CandidateList(props) {
                       description = {candidate.description}
                       handleVoter={props.handleVoter}
                   />
-           
-              
           </Col>  
          ))} 
       </Row>
