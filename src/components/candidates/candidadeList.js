@@ -12,7 +12,7 @@ function CandidateList(props) {
                       image={candidate.image} 
                       name ={candidate.name}
                       description = {candidate.description}
-                      handleVoter={props.handleVoter}  
+                      handleVoter={props.handleVoter}
                   />
            
               

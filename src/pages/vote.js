@@ -9,7 +9,7 @@ const initialFormData = Object.freeze({
 });
 
 
-const Login = (props) => {
+const Vote = (props) => {
 
   const [formData, updateFormData] = useState(initialFormData);
 
@@ -31,9 +31,10 @@ const Login = (props) => {
   
   const handleVoterSubmission = (e) => {
     e.preventDefault();
-     console.log(formData);
+    let prevVoterData = props.prevVoterData.map(voter => ({...voter}));
+    prevVoterData.push(formData);
+    props.setVoterData(prevVoterData);
   }
-
 
   return (
    <Form>
@@ -51,4 +52,4 @@ const Login = (props) => {
   )
 }
 
-export default Login
+export default Vote

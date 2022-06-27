@@ -61,7 +61,7 @@ const DUMMY_DATA = [
 
 ];
 
-function Candidates() {
+function Candidates(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const handleVoter =  () => setModalIsOpen(true);
@@ -70,9 +70,17 @@ function Candidates() {
     return <>
         <section>
             <h1>List of Candidates</h1>
-            <CandidateList candidates={DUMMY_DATA} handleVoter={handleVoter} />
+            <CandidateList 
+                candidates={DUMMY_DATA} 
+                handleVoter={handleVoter} 
+            />
         </section>
-        <VoterModal show={modalIsOpen} onHide={handleClose}/>
+        <VoterModal 
+            show={modalIsOpen} 
+            onHide={handleClose} 
+            setVoterData={props.setVoterData} 
+            prevVoterData={props.prevVoterData} 
+        />
     </> 
     
 

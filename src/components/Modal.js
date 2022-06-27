@@ -1,5 +1,5 @@
 import {Modal} from 'react-bootstrap';
-import Login from '../pages/login';
+import Vote from '../pages/vote';
 
 
 function VoterModal(props) {
@@ -8,7 +8,7 @@ function VoterModal(props) {
                 <Modal.Title>Modal title</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-               <Login onHide={props.onHide} />
+               <Vote onHide={props.onHide} setVoterData={props.setVoterData} prevVoterData={props.prevVoterData} />
             </Modal.Body>
            
     </Modal>
