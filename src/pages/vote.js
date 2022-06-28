@@ -3,13 +3,13 @@ import {Form, Button} from 'react-bootstrap';
 import { useState } from "react";
 
 const Vote = (props) => {
-  const initialFormData = {
+  const initialVoterData = {
     fullname : "",
     citizennumber: "",
     votedCandidateID: props.votedCandidateID,
   };
   
-  const [formData, updateFormData] = useState(initialFormData);
+  const [formData, updateFormData] = useState(initialVoterData);
   
 
   const handleNameChange = (e) => {

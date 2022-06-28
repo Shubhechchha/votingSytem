@@ -10,7 +10,7 @@ const Menu = () => {
                     <Container>
                         <Nav className="me-auto">
                             <Nav.Link href ="/">Candidates</Nav.Link>
-                            <Nav.Link href="/Signup">Signup</Nav.Link>
+                            <Nav.Link href="/statistic">Statistic</Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>
