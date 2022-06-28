@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {Form, Button} from 'react-bootstrap';
 
-const Signup = () => {
+const Statistic = () => {
     const firstnameInputRef= useRef();
     const lastnameInputRef = useRef();
     const emailInputRef = useRef();
@@ -61,4 +61,4 @@ const Signup = () => {
    )
 }
 
-export default Signup
+export default Statistic

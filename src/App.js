@@ -2,9 +2,9 @@ import './App.css';
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css";
-import Signup from './pages/Signup';
 import Candidates from './pages/candidates';
 import Layout from './components/layout/Layout';
+import Statistic from './pages/Statistic';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path = "/" element = {<Candidates setVoterData={setVoterData} prevVoterData={voterData} />} /> 
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/statistic" element={<Statistic />} />
         </Routes>
       </Layout>
     </>

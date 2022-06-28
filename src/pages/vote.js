@@ -36,7 +36,7 @@ const Vote = (props) => {
       let prevVoterData = props.prevVoterData.map(voter => ({...voter}));  
       prevVoterData.push(formData);
       props.setVoterData(prevVoterData);
-      //props.onHide();
+      props.onHide();
     
   }
 
