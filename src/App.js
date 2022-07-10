@@ -69,29 +69,14 @@ function App() {
     ];
 
   const [voterData, setVoterData] = useState([]);
-  
-  let stats = () => {
-    let counter ={};
-    for(let i=0; i < voterData.length; i++) {
-        let vote = voterData[i];
-          let candidateKeys = Object.keys(counter);
-           if(candidateKeys.includes(vote.votedCandidateID)) {
-             counter[vote.votedCandidateID] += 1;
-          } else
-              counter[vote.votedCandidateID] = 1;
-        }
-        return counter;
-    }
- 
-    console.log(stats());
+  console.log("Current Voter Data: " + JSON.stringify(voterData))
 
-  console.log("Current Voter data: " + JSON.stringify(voterData));
   return (
      <> 
       <Layout>
         <Routes>
           <Route path = "/" element = {<Candidates setVoterData={setVoterData} prevVoterData={voterData} candidateData={candidateData} />} /> 
-          <Route path="/statistic" element={<Statistic />} />
+          <Route path="/statistic" element={<Statistic voterInfo={voterData} candidateInfo={candidateData} />} />
         </Routes>
       </Layout>
     </>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import CandidateList from "../components/candidates/candidadeList";
 import VoterModal from "../components/Modal";
 
@@ -35,4 +35,4 @@ function Candidates(props) {
 
 }
 
-export default Candidates;
+export default memo(Candidates);
